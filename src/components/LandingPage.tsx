@@ -6,7 +6,7 @@ const LandingPage = () => {
   return (
     <View>
       <Text>
-        Test text 2
+        Test text 3
       </Text>
     </View>
   )
