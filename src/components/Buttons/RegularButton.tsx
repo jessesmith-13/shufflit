@@ -1,10 +1,13 @@
 import React from "react";
-import { Pressable } from 'react-native';
+import { Pressable, Text } from 'react-native';
 import { ButtonProps } from './types'
 
-const RegularButton: React.FunctionComponent<ButtonProps> = (props) => {
+const RegularButton: React.FunctionComponent<ButtonProps> = ({className, onPress, text}) => {
   return (
-    <Pressable>
+    <Pressable className={className} onPress={onPress}>
+      <Text>{text}</Text>
     </Pressable>
   )
 }
+
+export default RegularButton;
