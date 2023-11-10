@@ -1,7 +1,8 @@
 import { ReactNode } from 'react';
-import { StyleProp, ViewStyle } from 'react-native';
+import { StyleProp, ViewStyle, GestureResponderEvent } from 'react-native';
 
 export interface ButtonProps {
-  children: ReactNode;
-  className: StyleProp<ViewStyle>;
+  className: string;
+  onPress: (event: GestureResponderEvent) => void | undefined;
+  text: string;
 }
