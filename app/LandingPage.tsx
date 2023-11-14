@@ -9,18 +9,28 @@ const LandingPage = (props) => {
     <View>
       <Text className="mb-8">Shufflit</Text>
       <Link
-        href="/LoginPage"
+        href="/Login"
+        asChild
       >
-        <RegularButton
-          className='border-solid border-2 border-indigo-600'
-          onPress={() => Alert.alert('YOU HAVE PRESSED THE LOGIN BUTTON')}
-          text='Login'
-        />
+        <Pressable
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          <Text>
+            Login!
+          </Text>
+        </Pressable>
       </Link>
       <Link
         href="/SignUp"
-      >
-        Sign Up
+        asChild
+        >
+        <Pressable
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          <Text>
+            Sign Up
+          </Text>
+        </Pressable>
       </Link>
 
     </View>
