@@ -1,34 +1,32 @@
 import { StyleSheet, Text, View } from "react-native";
 import LandingPage from "./LandingPage";
+import { useFonts } from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
+import { useCallback } from "react";
 
 export default function Page() {
+  const [fontsLoaded, fontError] = useFonts({
+    'GothicOne': require('../assets/fonts/PathwayGothicOne-Regular.ttf'),
+  });
+
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded || fontError) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded, fontError]);
+
+  if (!fontsLoaded && !fontError) {
+    return null;
+  }
+
   return (
-    <View style={styles.container}>
-      <View style={styles.main}>
+    <View onLayout={onLayoutRootView}>
+      <View>
+        <Text style={{ fontFamily: 'GothicOne' }}>
+          Blah
+        </Text>
         <LandingPage></LandingPage>
       </View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    padding: 24,
-  },
-  main: {
-    flex: 1,
-    justifyContent: "center",
-    maxWidth: 960,
-    marginHorizontal: "auto",
-  },
-  title: {
-    fontSize: 64,
-    fontWeight: "bold",
-  },
-  subtitle: {
-    fontSize: 36,
-    color: "#38434D",
-  },
-});
