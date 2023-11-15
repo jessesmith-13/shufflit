@@ -4,7 +4,7 @@ import LandingPage from './app/LandingPage';
 
 export default function App() {
   return (
-    <View className="flex-1 items-center justify-center">
+    <View>
       <LandingPage/>
       <StatusBar style="auto" />
     </View>
