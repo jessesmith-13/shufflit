@@ -5,6 +5,8 @@
 
 const tintColorLight = '#0a7ea4';
 const tintColorDark = '#fff';
+const darkBlue = '#405867';
+const sageGreen = '#9CAF88';
 
 export const Colors = {
   light: {
@@ -23,4 +25,10 @@ export const Colors = {
     tabIconDefault: '#9BA1A6',
     tabIconSelected: tintColorDark,
   },
+  darkBlue: {
+    color: darkBlue
+  },
+  sageGreen: {
+    color: sageGreen
+  }
 };
