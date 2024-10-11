@@ -17,20 +17,20 @@ function HomeScreen() {
           source={require('@/assets/images/landing-page.jpg')}
           style={styles.heroImage}
       >
+        <View style={styles.overlay}></View>
         <View
           style={styles.titleContainer}
         >
-          <ThemedText>
-            Sign in Using
+          <ThemedText
+            type='title'
+            color='blue'
+          >
+            Sign in using
           </ThemedText>
-          <Input
-            text='hi'
-          ></Input>
         </View>
         <View
           style={styles.signInContainer}
         >
-
           <PrimaryButton
             size="medium"
             color="blue"
@@ -45,16 +45,24 @@ function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // opacity: 1,
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
-  signInContainer: {
-    flex: 1
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(255, 255, 255, 0.5)'
   },
   titleContainer: {
     flexDirection: 'column',
     alignItems: 'center',
-    flex: 2,
+    flex: 1,
+    width: '100%',
+    justifyContent: 'center',
+  },
+  signInContainer: {
+    flex: 3,
+    alignItems: 'center',
+    position: 'relative',
+    zIndex: 1
   },
   stepContainer: {
     gap: 8,
@@ -65,7 +73,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     width: null,
     height: null,
-    // opacity: 0.5  
   },
 });
 
