@@ -2,6 +2,7 @@ import { ImageBackground, StyleSheet, View } from 'react-native';
 import { ThemedText } from '@/components/ThemedText';
 import { PrimaryButton } from '@/components/PrimaryButton';
 import { registerRootComponent } from 'expo';
+import SocialIconBar from '@/components/SocialIconBar';
 
 function HomeScreen() {
 
@@ -27,6 +28,13 @@ function HomeScreen() {
           >
             Sign in using
           </ThemedText>
+          <SocialIconBar
+            icons={[
+              { name: 'facebook', backgroundColor: '#3b5998', onPress: () => console.log('Facebook icon pressed') },
+              { name: 'twitter', backgroundColor: '#1da1f2', onPress: () => console.log('Twitter icon pressed') },
+              { name: 'instagram', backgroundColor: '#e4405f', onPress: () => console.log('Instagram icon pressed') },
+            ]}
+          />
         </View>
         <View
           style={styles.signInContainer}
