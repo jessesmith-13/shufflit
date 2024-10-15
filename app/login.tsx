@@ -1,14 +1,14 @@
 import { ImageBackground, StyleSheet, View } from 'react-native';
-
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { PrimaryButton } from '@/components/PrimaryButton';
 import { registerRootComponent } from 'expo';
-import { Input } from '@/components/Input';
-import { rgbaColor } from 'react-native-reanimated/lib/typescript/reanimated2/Colors';
 
 function HomeScreen() {
+
+  const testOnPress = () => {
+    console.log('AHHH!')
+  };
+
   return (
     <View
       style={styles.container}
