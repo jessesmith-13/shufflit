@@ -6,10 +6,6 @@ import SocialIconBar from '@/components/SocialIconBar';
 
 function HomeScreen() {
 
-  const testOnPress = () => {
-    console.log('AHHH!')
-  };
-
   return (
     <View
       style={styles.container}
